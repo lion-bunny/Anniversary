@@ -3,83 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Anniversary Flipbook</title>
+    <title>Our Anniversary</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-
-
-<!-- Password Screen -->
-<div id="password-screen">
-    <h2>Password</h2>
-    <input type="password" id="password-input" placeholder="Enter Password">
-    <button onclick="checkPassword()">Submit</button>
-    <p id="error-message"></p>
-</div>
-
-
-<!-- Flipbook Content (hidden by default) -->
-<div id="flipbook-content" style="display: none;">
-    <header>
-        <h1>Happy Anniversary, Adhya!</h1>
-        <p>Our journey, one page at a time ❤️</p>
-    </header>
-
-
-    <section id="flipbook">
-        <div class="page active" id="page1">
-            <h2>Our First Date - Live Oak</h2>
-            <p>Live Oak! I still remember how nervous I was walking to Live Oak, so excited to finally see you but also nervous if we'd connect in person as we did texting. But from the very first moment I saw you I had to try my hardest to contain my smile because you were – and always will be – the prettiest girl I've ever seen. When we said bye, I had the biggest smile on my face and when I turned around to see you I wanted to just hug you and not let go.</p>
-        </div>
-        <div class="page" id="page2">
-            <h2>Many Dates After ...</h2>
-            <p>I asked you to prom, and then, with my heart racing more than ever, gathered all my courage to ask you to be my girlfriend. I remember us standing under that streetlamp, and as I asked, I could barely contain the mix of excitement and nerves. Even though I hoped with all my heart you’d say yes, I still couldn’t believe it when you did. When we hugged for the longest time after, every bit of nervousness melted away, and I realized just how lucky I was. My crush since sophomore year was now my girlfriend!</p>
-        </div>
-        <div class="page" id="page3">
-            <h2>Old Ranch Park</h2>
-            <p>Our first date away from Live Oak, I was more excited than ever. I remember it was raining the morning that day, but the skies cleared up just in time, as if even the weather wanted everything to be perfect. We walked up the trail together, and when we sat on the bench, I asked if we could kiss. My heart was going crazy, and even though our first kiss was a little shy and awkward, it was perfect. And watching the beautiful sunset with a girl even more beautiful made me want to just stay in that moment– just you and me, forever.</p>
-        </div>
-        <div class="page" id="page4">
-            <h2>Prom</h2>
-            <p>Prom was amazing with you. When I saw you for the first time in your beautiful green dress, I wanted to hug you and kiss you and not let go. But spending time together was so incredible. Kissing you at the end made my heart flutter so much, and I just wanted everyone to know you’re mine. Being with you made everything perfect.</p>
-        </div>
-        <div class="page" id="page5">
-            <h2>Summer</h2>
-            <p>Our movies dates, where sitting on each other’s laps was goofy but so nice hehe. I loved laying my head on you, and truth be told I was much more focused on you than the movie ;)<br>Our LOT dates, where I loved walking along the beautiful lake with you and spending time with you. Being alone with you just makes me so happy, Adhya. And our tiktok – even though I hate dancing, making that video with you was one of the most fun things I’ve ever done. Looking back, every single thing we do is the most fun thing ever.<br>Our trail date, where we saw the breathtaking views from the very top. And seeing the kids play in the playground made me imagine when we’ll have kids of our own and sit watching them play.</p>
-        </div>
-        <div class="page" id="page6">
-            <h2>First Kiss kiss</h2>
-            <p>Oh my god, I still remember so clearly when we first kiss kissed. I was so nervous and I remember us trying to ask each other to do it first. But even though the first was awkward, I loved it more than anything. I love you more than anything.</p>
-        </div>
-        <div class="page" id="page7">
-            <h2>Hoco</h2>
-            <p>I loved being your date to hoco. I loved holding your hands and letting everyone know that you’re mine, and moshing with you. I loved laying on your shoulder at the end – I could have just fallen asleep in that moment next to you.</p>
-        </div>
-        <div class="page" id="page8">
-            <h2>The Future</h2>
-            <p>Looking back, I can’t tell you how much I appreciate you, Adhya. Thank you for coming into my life, for always being there and supporting me. Thank you for making me feel more loved than ever, listening to my rants, and helping me when it’s hard. I love everything about you, Adhya. You’re the most beautiful girl ever, and no matter how many “bruhs” you say, I hope you know it’s true. And I’m the luckiest boy ever to have you. Please know that I’ll always be here for you, no matter what. Whether we’re in college or anywhere, you’ll always have me to text, call, talk to, hug, and anything. I’m not going anywhere, and I promise you that with my whole heart. I can’t wait for our one year to turn into two, and then three, and before long, we’ll be wearing Indian dresses getting married to each other. And then having kids (and doggos!) and living every moment of life together. I can’t wait for our future ahead, and I’m confident it’ll be incredible with you. Happy anniversary, my love ❤️</p>
-        </div>
-        <div class="page" id="page9">
-            <h2>I love you</h2>
-            <p>More than anything my bhangaram ❤️</p>
-        </div>
-
-
-    </section>
-
-
-    <div id="controls">
-        <button onclick="previousPage()">Previous</button>
-        <button onclick="nextPage()">Next</button>
+    <!-- Password Screen -->
+    <div id="password-screen">
+        <h1>Enter Password</h1>
+        <input type="password" id="password-input" placeholder="Enter password...">
+        <button id="unlock-btn">Unlock</button>
+        <p id="error-message"></p>
     </div>
 
+    <!-- Main Content (Hidden Initially) -->
+    <div id="content" class="hidden">
+        <div class="hero">
+            <h1>Happy One Year Anniversary ❤️</h1>
+            <p>365 days of love and memories...</p>
+            <button id="start-btn">Click here!</button>
+        </div>
 
-    <footer>
-        <p>To many more years together ❤️</p>
-    </footer>
-</div>
+        <div class="container">
+            <div class="card">
+                <h2>Our Journey Together</h2>
+                <p>Adhya, you’ve been nothing but a blessing ever since the day you came into my life. You completely changed what I thought a relationship would be like, and I grew more and more dependent on you every day. You’re the reason I sleep at night smiling, and wake up excited to see a good morning text. You’re the one whose texts bring a big smile to my face, no matter what time of day it is. I love every single thing about you – your gorgeous brown eyes, your beautiful eyelashes, your cute little nose, your pretty lips (that my lips love too HEHE), your so good smelling hair. But what’s more is how sweet of a personality you have – you’re so kind, so caring, and see the best in me and everyone. You’re supportive and always there for me, whether I need someone to rant to or someone to hug. I feel like I can always rely on you. And your hugs make me forget about everything and in those moments all I can think about is how much I love you. 
 
+                    <br> So for all that, thank you Adhya. Thank you for being mine, for giving me all those amazing moments the past year. Thank you for being my girlfriend, but most importantly, a partner I know I can always count on. Thank you for getting me through the hard times and celebrating through the good ones, for giving me things to look forward to. Thank you for everything my bhangaram I’ll always be so grateful for you. 
+                    
+                    
+                     </p>
+            </div>
 
-<script src="script.js"></script>
+            <div class="card">
+                <h2>Memorable Moments</h2>
+                <p>We’ve made so many memories together Adhya, and here are some of my favorite ones…
+
+                    <br>
+                    
+                    One year ago, the day I asked you to be my girlfriend, I remember so clearly. We spent time together in Live Oak, you gave me a Lego set and a lion and twix!! and a card that I read so often even now. I asked you out to prom, and I was so happy when you said yes. And after we cuddled on the play structure, I remember how much my heart was thumping under the lamp before I asked you. I had practiced a hundred times before about how I would ask you, but in that moment I forgot everything. Thank you for saying yes Adhya, and thank you for being my girlfriend. You make every moment ever so special. 
+                    
+                    <br>
+                    
+                    Our first non-Live Oak date was at Old Ranch, and I remember our first kiss so clearly. We had talked so much about it, but I felt so shy and I had so many butterflies in my stomach. But no matter how awkward that first peck was, it was perfect Adhya. Sitting on the bench seeing the most beautiful sunset ever with the most beautiful girl ever made it perfect. (I also remember how bad you lost in basketball :P) 
+                    
+                    <br>
+                    
+                    Our summer dates and those in the Lot were so amazing Adhya. But one moment I can’t forget is our first kiss kiss! I remember how nervous we both were, and how we were both trying to play it off, and when we first finally tried, it was … SO NICE hehehe. I think that our tongues have honestly spent a long time together these past few months 😀. Even though the firsts are always awkward, I’m so glad I’m experiencing them with you my baby. I love you ♥️
+                    
+                    <br>
+                    
+                    I loved hoco sooo much and everyone could see you’re mine hehehe and I loved holding your hand while moshing and hugging you after it was done and talking to you and just everything becomes a million times better when it’s with you my love. 
+                    
+                    <br> 
+                    
+                    Soooo I also remember the first day I touched chocolates HEHEHE. Honestly you’re just so hot so this is your fault not mine but that was the most insane day ever oh my god. In the parking lot of the movies I thought I was in heaven honestly hehee. And through all the naughty things that have happened since !! I’m so glad it’s been with you Adhu, and I can’t imagine that with anyone else. I love you my baby, and thank you for understanding even though it took a few tries hehe and for being so sweet about it. I love you more than anything my Adhya. 
+                    
+                    <br>
+                    
+                    Through all the memories we’ve made and those we’ll continue to make, I promise I’ll love you the most in the world. I promise I’ll always make sure you’re happy, care for you, lighten up your days, and always, always be there for you. The more I think about the past year the more I’m realizing how special every moment becomes when I spend it with you. And that’s because you’re so special Adhya, in every single way, and I’m so lucky to have you as my girlfriend. I can’t ever put into words how much I love you, and I know that love continues to grow every day. I love you my Adhu ♥️
+                    </p>
+            </div>
+
+            <div class="card">
+                <h2>Forever to Go</h2>
+                <p>This is just the beginning of our story. Here's to many more anniversaries together.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>Made with ❤️ for you</p>
+        </footer>
+    </div>
 </body>
 </html>
